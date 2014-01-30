@@ -129,6 +129,39 @@ color: #FFFFFF;
 	margin-top:4.0rem;
 }
 
+.component.button{
+	background: @colorcorporativo;
+	color: white;
+	.borderradius(15px,15px,15px,15px);
+	border: none;
+	font-family: "Open Sans";
+	padding: 10px;
+	min-width: 80px;
+	max-width:140px;
+	margin: 30px auto;
+	.transition(5s);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	cursor:pointer;
+
+}
+
+
+
+.component.button:hover{
+	background: white;
+	color:#000;
+	border: 2px solid #000;
+	
+	
+}
+
+
+.component.button > a:hover{
+	color:#000;
+}
+
 
 .component.list {
     margin: 20px 0 0 0;
@@ -162,8 +195,27 @@ color: #FFFFFF;
     height: 220px;
 }
 
-.component.list > .item > .circle > .image { 
+.component.list > .item > .circle > .img1 { 
      background: url('/img/sublime.png') no-repeat center top;
+      background-size:auto 150%;
+}
+
+.component.list > .item > .circle > .img2 { 
+     background: url('/img/frontend.jpg') no-repeat right top;
+      background-size:auto 100%;
+
+
+}
+
+.component.list > .item > .circle > .img3 { 
+     background: url('/img/emprendedores.jpg') no-repeat center top;
+     background-size:auto  100%;
+
+}
+
+.component.list > .item > .circle > .img4 { 
+     background: url('/img/aprendices.jpg');
+       background-size:auto 100%;
 
 }
 
@@ -183,19 +235,46 @@ color: #FFFFFF;
 .component.list {
 	
 	
-	@media (max-width: @tabletbreakmax) {
-            padding:0px 10px;
+	@media (max-width: 1100px) {
+            padding:0px 0px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 700px;
         }
 }
 
 .component.list > .item  {
 	
 	
-	@media (max-width: @tabletbreakmax) {
-              margin:4px 0px;
-              min-height:150px;
+	@media (max-width: 1100px) {
+              margin:4px 4px;
+              min-height:160px;
+              float:left;
+              width:100%;
 
         }
+
+        @media (max-width: @mobilebreakmax) {
+              margin:4px 4px;
+              min-height:120px;
+              float:left;
+              width:100%;
+
+        }
+}
+
+
+.component.list > .item > .content > p{
+	
+	
+	
+
+        @media (min-width: 1101px) {
+        		height:70px;
+                
+         }
+
+       
 }
 
 .component.list > .item > .content {
@@ -203,22 +282,50 @@ color: #FFFFFF;
 	max-width: 220px;
 	@media (max-width: @laptopbreakmax) {
                 float:left;
-               
+              
                 padding-left:15px;
-                text-align: left;
+                text-align: justify;
+                padding-top:10px;
+        }
+
+        @media (max-width: 1100px) {
+                width: 600px;
+              	max-width: 60%;
+                padding-left:15px;
+                text-align: justify;
+                padding-top:10px;
+                float:left;
+        }
+
+        @media (max-width: @mobilebreakmax) {
+                
+               max-width: 60%;
+                padding-left:15px;
+                text-align: justify;
                 padding-top:10px;
         }
 }
 
 .component.list > .item > .circle {
+
+
+	 @media (max-width: 1100px) {
+                 width: 150px;
+			    height: 150px;
+			    display: inline-block;
+			    margin: 0px;
+			    float:left;
+        }
 	
-	@media (max-width: @laptopbreakmax) {
+	@media (max-width: @mobilebreakmax) {
                  width: 100px;
 			    height: 100px;
 			    display: inline-block;
 			    margin: 0px;
 			    float:left;
         }
+
+   
 }
 
 
